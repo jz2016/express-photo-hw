@@ -12,7 +12,6 @@ body {
 	background-image: url("https://i.pinimg.com/originals/e7/e5/25/e7e52546cfb88e927815bdfd68e1cef2.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
-	/*height: 100%;*/
 	background-position: center;
 }
 
@@ -23,7 +22,7 @@ h1 {
 	text-shadow:
 		-1px 6px #FFB547, 
 		2px -1px 1px #13E8E1, 
-		-2px 12px 2px #FF66C0, 
+		-2px 12px 1px #FF66C0, 
 		2px 2px 2px #5BFF84;
 }
 
@@ -33,6 +32,11 @@ h1 {
 	padding: 10px 40px;
 	line-height: .5;
 	background-size: contain;
+	 box-shadow: 0 0 15px 10px black;
+}
+
+.changesContainer {
+	margin-top: 150px;
 }
 
 img {

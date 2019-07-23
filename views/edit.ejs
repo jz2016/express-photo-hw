@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 </head>
 	<body id="background">
-		<div class="container">
+		<div class="container changesContainer">
 			<h1>Edit Photo Info</h1>
 			<form class="editForm" action="/photos/<%=photo._id%>?_method=PUT" method="POST">
 				Username: <input class="editInput" id="editUsername" type="text" name="username" value="<%=photo.username%>"><br/>
