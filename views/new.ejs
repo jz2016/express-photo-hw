@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Photos</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+</head>
+	<body>
+		<h1>Add New Photo</h1>
+		<form action="/photos" method="POST">
+			Username: <input type="text" name="username"><br/>
+			Photo URL: <input type="text" name="photoUrl"><br/>
+			Photo Name: <input type="text" name="photoName"><br/>
+			Caption: <input type="text" name="caption"><br/>
+			<input type="submit" value="Add To Gallery">
+		</form>
+		<form action="/photos" method="GET">
+			<button>Back to Gallery</button>
+		</form>
+
+	</body>
+</html>
