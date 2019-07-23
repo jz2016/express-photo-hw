@@ -3,18 +3,21 @@
 <head>
 	<title>Photo Gallery</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
-	<body>
-		<h1>Photo Gallery</h1>
-		<div>
-			<% photos.forEach(function(photo){%>
-				<a href="/photos/<%=photo._id%>">
-					<img src="<%=photo.photoUrl%>">
-				</a>
-			<%})%>
-			<form action="/photos/new" method="GET">
-				<input type="submit" value="Add New Photo">
-			</form>
+	<body id="background">
+		<div class="container">
+			<h1>Photo Gallery</h1>
+			<div>
+				<% photos.forEach(function(photo){%>
+					<a class="galleryImgAnchor" href="/photos/<%=photo._id%>">
+						<img src="<%=photo.photoUrl%>">
+					</a>
+				<%})%>
+				<form action="/photos/new" method="GET">
+					<input type="submit" value="Add New Photo">
+				</form>
+			</div>
 		</div>
 	</body>
 </html>

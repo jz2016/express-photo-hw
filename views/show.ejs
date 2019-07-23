@@ -3,22 +3,25 @@
 <head>
 	<title>Photo Details</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
-	<body>
-		<h1><%=photo.photoName%></h1>
-		<img class="showImage" src="<%=photo.photoUrl%>">
-		<p><%=photo.caption%></p>
-		<p>Uploaded by: <%=photo.username%></p>
-		<section>
-			<form action="/photos" method="GET">
-				<button>Back to Gallery</button>
-			</form>
-			<form action="/photos/<%=photo._id%>?_method=DELETE" method="POST">
-				<input type="submit" value="Delete From Gallery">
-			</form>
-			<form action="/photos/<%=photo._id%>/edit" method="GET">
-				<input type="submit" value="Edit Photo Info">
-			</form>
-		</section>
+	<body id="background">
+		<div class="container">
+			<h1><%=photo.photoName%></h1>
+			<img class="showImage" src="<%=photo.photoUrl%>">
+			<p><%=photo.caption%></p>
+			<p>Uploaded by: <%=photo.username%></p>
+			<section>
+				<form action="/photos" method="GET">
+					<button>Back to Gallery</button>
+				</form>
+				<form action="/photos/<%=photo._id%>?_method=DELETE" method="POST">
+					<input type="submit" value="Delete From Gallery">
+				</form>
+				<form action="/photos/<%=photo._id%>/edit" method="GET">
+					<input type="submit" value="Edit Photo Info">
+				</form>
+			</section>
+		</div>
 	</body>
 </html>

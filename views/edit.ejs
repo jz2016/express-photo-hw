@@ -3,16 +3,19 @@
 <head>
 	<title>Edit Photo</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
-	<body>
-		<h1>Edit Phot Information</h1>
-		<form action="/photos/<%=photo._id%>?_method=PUT" method="POST">
-			Username: <input type="text" name="username" value="<%=photo.username%>"><br/>
-			Photo URL: <input type="text" name="photoUrl" value="<%=photo.photoUrl%>"><br/>
-			Photo Name: <input type="text" name="photoName" value="<%=photo.photoName%>"><br/>
-			Caption: <input type="text" name="caption" value="<%=photo.caption%>"><br/>
-			<input type="submit" value="Submit Changes">
-		</form>
+	<body id="background">
+		<div class="container">
+			<h1>Edit Phot Information</h1>
+			<form action="/photos/<%=photo._id%>?_method=PUT" method="POST">
+				Username: <input type="text" name="username" value="<%=photo.username%>"><br/>
+				Photo URL: <input type="text" name="photoUrl" value="<%=photo.photoUrl%>"><br/>
+				Photo Name: <input type="text" name="photoName" value="<%=photo.photoName%>"><br/>
+				Caption: <input type="text" name="caption" value="<%=photo.caption%>"><br/>
+				<input type="submit" value="Submit Changes">
+			</form>
+		</div>
 
 	</body>
 </html>
