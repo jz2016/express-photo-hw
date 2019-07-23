@@ -4,16 +4,17 @@
 	<title>Edit Photo</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 </head>
 	<body id="background">
 		<div class="container">
-			<h1>Edit Phot Information</h1>
-			<form action="/photos/<%=photo._id%>?_method=PUT" method="POST">
-				Username: <input type="text" name="username" value="<%=photo.username%>"><br/>
-				Photo URL: <input type="text" name="photoUrl" value="<%=photo.photoUrl%>"><br/>
-				Photo Name: <input type="text" name="photoName" value="<%=photo.photoName%>"><br/>
-				Caption: <input type="text" name="caption" value="<%=photo.caption%>"><br/>
-				<input type="submit" value="Submit Changes">
+			<h1>Edit Photo Info</h1>
+			<form class="editForm" action="/photos/<%=photo._id%>?_method=PUT" method="POST">
+				Username: <input class="editInput" id="editUsername" type="text" name="username" value="<%=photo.username%>"><br/>
+				Photo URL: <input class="editInput" id="editPhotoUrl" type="text" name="photoUrl" value="<%=photo.photoUrl%>"><br/>
+				Photo Name: <input class="editInput" id="editPhotoName" type="text" name="photoName" value="<%=photo.photoName%>"><br/>
+				Caption: <input class="editInput" id="editCaption" type="text" name="caption" value="<%=photo.caption%>"><br/>
+				<input id="submitEdit" type="submit" value="Submit Changes">
 			</form>
 		</div>
 

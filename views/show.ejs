@@ -4,6 +4,7 @@
 	<title>Photo Details</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 </head>
 	<body id="background">
 		<div class="container">
@@ -11,15 +12,15 @@
 			<img class="showImage" src="<%=photo.photoUrl%>">
 			<p><%=photo.caption%></p>
 			<p>Uploaded by: <%=photo.username%></p>
-			<section>
+			<section class="showForm">
 				<form action="/photos" method="GET">
 					<button>Back to Gallery</button>
 				</form>
 				<form action="/photos/<%=photo._id%>?_method=DELETE" method="POST">
-					<input type="submit" value="Delete From Gallery">
+					<input class="showButtons" type="submit" value="Delete From Gallery">
 				</form>
 				<form action="/photos/<%=photo._id%>/edit" method="GET">
-					<input type="submit" value="Edit Photo Info">
+					<input id="editPhotoOnShow" class="showButtons" type="submit" value="Edit Photo Info">
 				</form>
 			</section>
 		</div>

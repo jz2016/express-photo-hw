@@ -4,19 +4,20 @@
 	<title>Add Photos</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 </head>
 	<body id="background">
 		<div class="container">
 			<h1>Add New Photo</h1>
-			<form action="/photos" method="POST">
-				Username: <input type="text" name="username"><br/>
-				Photo URL: <input type="text" name="photoUrl"><br/>
-				Photo Name: <input type="text" name="photoName"><br/>
-				Caption: <input type="text" name="caption"><br/>
-				<input type="submit" value="Add To Gallery">
+			<form class="newPhotoForm" action="/photos" method="POST">
+				Username: <input id="newUsername" type="text" name="username"><br/>
+				Photo URL: <input id="newPhotoUrl" type="text" name="photoUrl"><br/>
+				Photo Name: <input id="newPhotoName" type="text" name="photoName"><br/>
+				Caption: <input id="newCaption" type="text" name="caption"><br/>
+				<input id="submitNewPhoto" type="submit" value="Add To Gallery">
 			</form>
 			<form action="/photos" method="GET">
-				<button>Back to Gallery</button>
+				<button id="backToGallery">Back to Gallery</button>
 			</form>
 		</div>
 

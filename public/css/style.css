@@ -19,12 +19,12 @@ body {
 h1 {
 	color: white;
 	font-size: 80px;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Lobster', cursive;
 	text-shadow:
-		-1px -1px 2px black,
-		1px -1px 1px black,
-		-1px 1px 2px black,
-		1px 1px 1px black;
+		-1px 6px #FFB547, 
+		2px -1px 1px #13E8E1, 
+		-2px 12px 2px #FF66C0, 
+		2px 2px 2px #5BFF84;
 }
 
 .container {
@@ -32,12 +32,14 @@ h1 {
 	display: inline-block;
 	padding: 10px 40px;
 	line-height: .5;
+	background-size: contain;
 }
 
 img {
 	height: 100px;
 	width: 150px;
-	border: thick solid #00CED1;
+	border: thin solid #00CED1;
+	display: inline-block;
 }
 
 .galleryImgAnchor:hover {
@@ -52,3 +54,205 @@ img {
 	height: 400px;
 	width: 600px;
 }
+
+.newPhotoForm, .editForm {
+	color: white;
+	font-size: 30px;
+	line-height: 1;
+	font-family: 'Lobster', cursive;
+	text-shadow:
+		-1px -1px 2px black,
+		1px -1px 1px black,
+		-1px 1px 2px black,
+		1px 1px 1px black;
+}
+
+input[type=text] {
+	width: 30%;
+	font-size: 14px;
+	color: navy;
+}
+
+.editInput {
+	width: 30%;
+	font-size: 14px;
+	color: navy;
+	text-shadow: none;
+}
+
+#newUsername {
+	background-color: #FFB547;
+}
+
+#newPhotoUrl {
+	background-color: #13E8E1;
+}
+
+#newPhotoName {
+	background-color: #FF66C0;
+}
+
+#newCaption {
+	background-color: #5BFF84;
+}
+
+button {
+	background-color: #13E8E1;
+	font-family: 'Playfair Display', serif;
+	font-size: 15px;
+	margin: 5px 0 5px 0;
+	border-radius: 25px;
+	color: white;
+	text-shadow:
+		-1px -1px 2px black,
+		1px -1px 1px black,
+		-1px 1px 2px black,
+		1px 1px 1px black;
+}
+
+button:hover {
+	background-color: #7278E8;
+}
+
+button:active {
+  	background-color: #7278E8;
+  	box-shadow: 0 5px #666;
+  	transform: translateY(4px);
+}
+
+input {
+	background-color: #13E8E1;
+	font-family: 'Playfair Display', serif;
+	font-size: 15px;
+	color: white;
+	text-shadow:
+		-1px -1px 2px black,
+		1px -1px 1px black,
+		-1px 1px 2px black,
+		1px 1px 1px black;
+}
+
+#submitNewPhoto {
+	border-radius: 25px;
+}
+
+#submitNewPhoto:hover {
+	background-color: #7278E8;
+}
+
+#submitNewPhoto:active {
+  	background-color: #7278E8;
+  	box-shadow: 0 5px #666;
+  	transform: translateY(4px);
+}
+
+#addNewPhoto {
+	background-color: #13E8E1;
+	font-family: 'Playfair Display', serif;
+	font-size: 15px;
+	margin: 5px 0 5px 0;
+	border-radius: 25px;
+}
+
+#editUsername {
+	background-color: #FFB547;
+}
+
+#editPhotoUrl {
+	background-color: #13E8E1;
+}
+
+#editPhotoName {
+	background-color: #FF66C0;
+}
+
+#editCaption {
+	background-color: #5BFF84;
+}
+
+#addNewPhoto:hover {
+	background-color: #FF66C0;
+}
+
+#addNewPhoto:active {
+  	background-color: #FF66C0;
+  	box-shadow: 0 5px #666;
+  	transform: translateY(4px);
+}
+
+p {
+	color: white;
+	font-size: 22px;
+	text-shadow:
+		-1px -1px 2px black,
+		1px -1px 1px black,
+		-1px 1px 2px black,
+		1px 1px 1px black;
+}
+
+.showButtons {
+	background-color: #13E8E1;
+	font-family: 'Playfair Display', serif;
+	font-size: 15px;
+	margin: 5px;
+	border-radius: 25px;
+	color: white;
+	text-shadow:
+		-1px -1px 2px black,
+		1px -1px 1px black,
+		-1px 1px 2px black,
+		1px 1px 1px black;
+}
+
+.showButtons:hover {
+	background-color: #FFB547;
+}
+
+.showButtons:active {
+  	background-color: #FFB547;
+  	box-shadow: 0 5px #666;
+  	transform: translateY(4px);
+}
+
+#submitEdit {
+	background-color: #13E8E1;
+	font-family: 'Playfair Display', serif;
+	font-size: 15px;
+	margin: 5px;
+	border-radius: 25px;
+	color: white;
+	text-shadow:
+		-1px -1px 2px black,
+		1px -1px 1px black,
+		-1px 1px 2px black,
+		1px 1px 1px black;
+}
+
+#submitEdit:hover {
+	background-color: #FFB547;
+}
+
+#submitEdit:active {
+  	background-color: #FFB547;
+  	box-shadow: 0 5px #666;
+  	transform: translateY(4px);
+}
+
+.showForm {
+	display: inline-flex;
+}
+
+#editPhotoOnShow:hover {
+ background-color: #5BFF84;
+}
+
+#backToGallery:hover {
+	background-color: #5BFF84;
+}
+
+#backToGallery:active {
+	background-color: #5BFF84;
+  	box-shadow: 0 5px #666;
+  	transform: translateY(4px);
+}
+
