@@ -75,6 +75,7 @@ input[type=text] {
 	width: 30%;
 	font-size: 14px;
 	color: navy;
+	text-shadow: none;
 }
 
 .editInput {
