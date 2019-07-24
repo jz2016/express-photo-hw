@@ -27,6 +27,10 @@ h1 {
 		2px 2px 2px #5BFF84;
 }
 
+#mainHeader {
+	font-size: 100px;
+}
+
 h2 {
 	font-family: 'Playfair Display', serif;
 	font-size: 40px;
