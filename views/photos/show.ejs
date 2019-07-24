@@ -11,10 +11,10 @@
 			<h1><%=photo.photoName%></h1>
 			<img class="showImage" src="<%=photo.photoUrl%>">
 			<p><%=photo.caption%></p>
-			<p>Uploaded by: <%=photo.user.username%></p>
+			<p id="uploadedBy">Uploaded by: <%=photo.user.username%></p>
 			<section class="showForm">
 				<form action="/photos" method="GET">
-					<button>Back to Gallery</button>
+					<button id="backToGalleryButton">Back to Gallery</button>
 				</form>
 				<form action="/photos/<%=photo._id%>?_method=DELETE" method="POST">
 					<input class="showButtons" type="submit" value="Delete From Gallery">

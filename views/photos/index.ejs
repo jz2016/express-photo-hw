@@ -15,12 +15,14 @@
 						<img src="<%=photo.photoUrl%>">
 					</a>
 				<%})%>
-				<form action="/photos/new" method="GET">
-					<input id="addNewPhoto" type="submit" value="Add New Photo">
-				</form>
-				<form action="/" method="GET">
-					<button>Home</button>
-				</form>
+				<section class="photoIndexButtons">
+					<form action="/photos/new" method="GET">
+						<input id="addNewPhoto" type="submit" value="Add New Photo">
+					</form>
+					<form action="/" method="GET">
+						<button>Home</button>
+					</form>
+				</section>
 			</div>
 		</div>
 	</body>
