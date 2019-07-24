@@ -3,16 +3,18 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 </head>
 	<body id="background">
 		<h1>Welcome to Z Gallery</h1>
 		<h2>Where are you headed to first?</h2>
-		<section>
-			<form action="/users" method="GET">
-				<button>User Profiles</button>
+		<section class="homeButtons">
+			<form class="homeButton" action="/users" method="GET">
+				<button class="home">User Profiles</button>
 			</form>
-			<form action="/photos" method="GET">
-				<button>Photo Gallery</button>
+			<form class="homeButton" action="/photos" method="GET">
+				<button class="home">Photo Gallery</button>
 			</form>
 		</section>
 	</body>

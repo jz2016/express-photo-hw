@@ -21,8 +21,9 @@ router.get("/", (req,res) => {
 // NEW Route
 router.get("/new", async (req,res) => {
 	const users = await User.find();
+	console.log(users);
 	res.render("photos/new.ejs", {
-		user: users
+		users: users
 	})
 });
 
@@ -74,6 +75,7 @@ router.put("/:id", (req,res) => {
 
 router.get("/:id", async (req,res) => {
 	const foundPhoto = await Photo.findById(req.params.id).populate("user");
+	console.log(foundPhoto);
 	res.render("photos/show.ejs", {
 		photo: foundPhoto
 	})

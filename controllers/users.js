@@ -77,9 +77,7 @@ router.post("/", async (req,res) => {
 	console.log(req.body, "<-- req.body entered in NEW form");
 	try {
 		const createdUser = await User.create(req.body);
-		res.redirect("/users", {
-			user: createdUser
-		});
+		res.redirect("/users")
 	} catch(error) {
 		res.send(error)
 	}

@@ -26,13 +26,25 @@ h1 {
 		2px 2px 2px #5BFF84;
 }
 
+h2 {
+	font-family: 'Playfair Display', serif;
+	font-size: 40px;
+	color: white;
+	text-shadow:
+		-1px -1px 2px black,
+		1px -1px 1px black,
+		-1px 1px 2px black,
+		1px 1px 1px black;
+
+}
+
 .container {
 	background-color: rgba(0,0,0,.5);
 	display: inline-block;
 	padding: 10px 40px;
 	line-height: .5;
 	background-size: contain;
-	 box-shadow: 0 0 15px 10px black;
+	box-shadow: 0 0 15px 10px black;
 }
 
 .changesContainer {
@@ -59,7 +71,7 @@ img {
 	width: 600px;
 }
 
-.newPhotoForm, .editForm {
+.newPhotoForm, .editForm, .createNewUserForm {
 	color: white;
 	font-size: 30px;
 	line-height: 1;
@@ -94,6 +106,10 @@ input[type=text] {
 }
 
 #newPhotoName {
+	background-color: #FF66C0;
+}
+
+#newPassword {
 	background-color: #FF66C0;
 }
 
@@ -154,7 +170,7 @@ input {
   	transform: translateY(4px);
 }
 
-#addNewPhoto {
+#addNewPhoto, #createNewUserButton {
 	background-color: #13E8E1;
 	font-family: 'Playfair Display', serif;
 	font-size: 15px;
@@ -164,6 +180,10 @@ input {
 
 #editUsername {
 	background-color: #FFB547;
+}
+
+#editPassword {
+	background-color: #FF66C0;
 }
 
 #editPhotoUrl {
@@ -178,11 +198,11 @@ input {
 	background-color: #5BFF84;
 }
 
-#addNewPhoto:hover {
+#addNewPhoto:hover, #createNewUserButton:hover {
 	background-color: #FF66C0;
 }
 
-#addNewPhoto:active {
+#addNewPhoto:active, #createNewUserButton:active {
   	background-color: #FF66C0;
   	box-shadow: 0 5px #666;
   	transform: translateY(4px);
@@ -222,7 +242,7 @@ p {
   	transform: translateY(4px);
 }
 
-#submitEdit {
+.submitEdit {
 	background-color: #13E8E1;
 	font-family: 'Playfair Display', serif;
 	font-size: 15px;
@@ -236,11 +256,11 @@ p {
 		1px 1px 1px black;
 }
 
-#submitEdit:hover {
+.submitEdit:hover {
 	background-color: #FFB547;
 }
 
-#submitEdit:active {
+.submitEdit:active {
   	background-color: #FFB547;
   	box-shadow: 0 5px #666;
   	transform: translateY(4px);
@@ -262,5 +282,140 @@ p {
 	background-color: #5BFF84;
   	box-shadow: 0 5px #666;
   	transform: translateY(4px);
+}
+
+#submitNewUser {
+	background-color: #13E8E1;
+	font-family: 'Playfair Display', serif;
+	font-size: 15px;
+	margin: 5px;
+	border-radius: 25px;
+	color: white;
+	text-shadow:
+		-1px -1px 2px black,
+		1px -1px 1px black,
+		-1px 1px 2px black,
+		1px 1px 1px black;
+}
+
+#submitNewUser:hover {
+	background-color: #7278E8;
+}
+
+#submitNewUser:active {
+	background-color: #7278E8;
+  	box-shadow: 0 5px #666;
+  	transform: translateY(4px);
+}
+
+.usersOnIndex {
+	font-family: 'Playfair Display', serif;
+	color: #FFB547;
+	text-decoration: none;
+	font-size: 20px;
+	line-height: 1.5;
+	text-shadow:
+		-1px -1px 2px black,
+		1px -1px 1px black,
+		-1px 1px 2px black,
+		1px 1px 1px black;
+}
+
+.usersOnIndex:hover {
+	color: #5BFF84;
+}
+
+#userIndex {
+	margin: 5px;
+}
+
+.userShow {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.userShowForms {
+	margin: 0 5px;
+}
+
+#editUserInfo {
+	background-color: #13E8E1;
+	font-family: 'Playfair Display', serif;
+	font-size: 15px;
+	margin: 5px;
+	border-radius: 25px;
+	color: white;
+	text-shadow:
+		-1px -1px 2px black,
+		1px -1px 1px black,
+		-1px 1px 2px black,
+		1px 1px 1px black;
+}
+
+#deleteUser {
+	background-color: #13E8E1;
+	font-family: 'Playfair Display', serif;
+	font-size: 15px;
+	margin: 5px;
+	border-radius: 25px;
+	color: white;
+	text-shadow:
+		-1px -1px 2px black,
+		1px -1px 1px black,
+		-1px 1px 2px black,
+		1px 1px 1px black;
+}
+
+#editUserInfoInput {
+	border-radius: 25px;
+}
+
+#editUserInfoInput:hover {
+	background-color: #FFB547;
+}
+
+#editUserInfoInput:active {
+	background-color: #FFB547;
+  	box-shadow: 0 5px #666;
+  	transform: translateY(4px);
+}
+
+#deleteUserInput {
+	border-radius: 25px;
+}
+
+#deleteUserInput:hover {
+	background-color: #5BFF84;
+}
+
+#deleteUserInput:active {
+	background-color: #5BFF84;
+  	box-shadow: 0 5px #666;
+  	transform: translateY(4px);
+}
+
+.editUserInfoForms {
+	color: white;
+	font-size: 30px;
+	line-height: 1;
+	font-family: 'Lobster', cursive;
+	text-shadow:
+		-1px -1px 2px black,
+		1px -1px 1px black,
+		-1px 1px 2px black,
+		1px 1px 1px black;
+}
+
+.homeButtons {
+	display: inline-flex;
+}
+
+.homeButton {
+	margin: 0 15px;
+}
+
+.home {
+	font-size: 35px;
+	padding: 10px;
 }
 

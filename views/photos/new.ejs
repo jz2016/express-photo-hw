@@ -13,8 +13,8 @@
 				Photo URL: <input id="newPhotoUrl" type="text" name="photoUrl"><br/>
 				Photo Name: <input id="newPhotoName" type="text" name="photoName"><br/>
 				Caption: <textarea id="newCaption" type="text" name="caption"></textarea><br/>
-				Uploaded by: <select name="username">
-					<% user.forEach(function(user){%>
+				Uploaded by: <select name="user">
+					<% users.forEach(function(user){%>
 						<option value="<%=user._id%>"><%=user.username%></option>
 					<%})%>
 				</select><br/>
