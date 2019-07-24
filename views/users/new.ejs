@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New User</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+</head>
+	<body id="background">
+		<div class="container changesContainer">
+			<h1>Create New User</h1>
+			<form action="/users" method="POST">
+				Create Username: <input type="text" name="username"><br/>
+				Create Password: <input type="text" name="password"><br/>
+				<input type="submit" value="Create Account">
+			</form>
+			<form action="/users" method="GET">
+					<button id="backToGallery">Back to User Profiles</button>
+			</form>
+		</div>
+	</body>
+</html>

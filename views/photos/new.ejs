@@ -10,11 +10,15 @@
 		<div class="container changesContainer">
 			<h1>Add New Photo</h1>
 			<form class="newPhotoForm" action="/photos" method="POST">
-				Username: <input id="newUsername" type="text" name="username"><br/>
 				Photo URL: <input id="newPhotoUrl" type="text" name="photoUrl"><br/>
 				Photo Name: <input id="newPhotoName" type="text" name="photoName"><br/>
 				Caption: <textarea id="newCaption" type="text" name="caption"></textarea><br/>
-				<input id="submitNewPhoto" type="submit" value="Add To Gallery">
+				Uploaded by: <select name="username">
+					<% user.forEach(function(user){%>
+						<option value="<%=user._id%>"><%=user.username%></option>
+					<%})%>
+				</select><br/>
+				<input id="submitNewPhoto" type="submit" value="Add to Gallery">
 			</form>
 			<form action="/photos" method="GET">
 				<button id="backToGallery">Back to Gallery</button>

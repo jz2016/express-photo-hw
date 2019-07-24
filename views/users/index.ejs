@@ -3,9 +3,23 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 </head>
 	<body id="background">
-		<h1>User Index</h1>
+		<div class="container">
+			<h1>User Profiles</h1>
+			<%users.forEach(function(users){%>
+				<div>
+					<a href="/users/<%=users._id%>"><%=users.username%></a>
+				</div>
+			<%})%>
+			<form action="/users/new" method="GET">
+				<input type="submit" value="Create New User">
+			</form>
+			<form action="/" method="GET">
+				<button>Home</button>
+			</form>
+		</div>
 
 	</body>
 </html>

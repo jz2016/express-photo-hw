@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Photo = require("../models/photos");
+const User = require("../models/users");
 
 // INDEX
 router.get("/", (req,res) => {
@@ -9,7 +10,7 @@ router.get("/", (req,res) => {
 		if(err) {
 			res.send(err)
 		} else {
-			res.render("index.ejs", {
+			res.render("photos/index.ejs", {
 				photos: photos
 			});
 		};
@@ -18,8 +19,11 @@ router.get("/", (req,res) => {
 
 
 // NEW Route
-router.get("/new", (req,res) => {
-	res.render("new.ejs")
+router.get("/new", async (req,res) => {
+	const users = await User.find();
+	res.render("photos/new.ejs", {
+		user: users
+	})
 });
 
 
@@ -30,27 +34,65 @@ router.get("/:id/edit", (req,res) => {
 			res.send(err)
 		} else {
 			console.log(foundPhoto, " <-- EDIT route, document from mongdb");
-			res.render("edit.ejs", {
+			res.render("photos/edit.ejs", {
 				photo: foundPhoto
 			});
 		};
 	});
 });
 
+// UPDATE
+router.put("/:id", (req,res) => {
+	Photo.updateOne(
+		{_id: req.params.id},
+		req.body,
+		(err, response) => {
+			if(err){
+				res.send(err);
+			} else {
+				console.log(response, "<-- PUT route");
+				res.redirect("/photos");
+			};
+		});
+});
+
 
 // SHOW Route
-router.get("/:id", (req,res) => {
-	console.log(req.params.id, " <-- params in SHOW route");
-	Photo.findById(req.params.id, (err,foundPhoto) => {
-		if(err) {
-			res.send(err)
-		} else {
-			console.log(foundPhoto, " <-- show route documentation from model");
-			res.render("show.ejs", {
-				photo: foundPhoto
-			});
-		};
-	});
+// router.get("/:id", (req,res) => {
+// 	console.log(req.params.id, " <-- params in SHOW route");
+// 	Photo.findById((req.params.id).populate("user"), (err,foundPhoto) => {
+// 		if(err) {
+// 			res.send(err)
+// 		} else {
+// 			console.log(foundPhoto, " <-- show route documentation from model");
+// 			res.render("photos/show.ejs", {
+// 				photo: foundPhoto
+// 			});
+// 		};
+// 	});
+// });
+
+router.get("/:id", async (req,res) => {
+	const foundPhoto = await Photo.findById(req.params.id).populate("user");
+	res.render("photos/show.ejs", {
+		photo: foundPhoto
+	})
+});
+
+
+// DELETE Route
+router.delete("/:id", (req,res) => {
+	console.log(req.body, "<-- in DELETE Route");
+	Photo.findByIdAndDelete(
+		req.params.id,
+		(err,response) => {
+			if(err) {
+				console.log(err)
+			} else {
+				console.log(response, "<-- DELETE Route");
+				res.redirect("/photos");
+			};
+		});
 });
 
 
