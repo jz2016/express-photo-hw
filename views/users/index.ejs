@@ -7,12 +7,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 </head>
 	<body id="background">
-		<div class="container">
+		<div class="container userIndexContainer">
 			<h1>User Profiles</h1>
 			<%users.forEach(function(users){%>
-				<div id="userIndex">
-					<a class="usersOnIndex" href="/users/<%=users._id%>"><%=users.username%></a>
-				</div>
+					<a class="usersOnIndex" href="/users/<%=users._id%>"><button class="profileButtons"><%=users.username%></button></a>
 			<%})%>
 			<form action="/users/new" method="GET">
 				<input id="createNewUserButton" type="submit" value="Create New User">

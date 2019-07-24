@@ -18,7 +18,7 @@ body {
 
 h1 {
 	color: white;
-	font-size: 80px;
+	font-size: 90px;
 	font-family: 'Lobster', cursive;
 	text-shadow:
 		-1px 6px #FFB547, 
@@ -29,18 +29,6 @@ h1 {
 
 #mainHeader {
 	font-size: 100px;
-}
-
-h2 {
-	font-family: 'Playfair Display', serif;
-	font-size: 40px;
-	color: white;
-	text-shadow:
-		-1px -1px 2px black,
-		1px -1px 1px black,
-		-1px 1px 2px black,
-		1px 1px 1px black;
-
 }
 
 .container {
@@ -56,6 +44,10 @@ h2 {
 	margin-top: 150px;
 }
 
+.userIndexContainer {
+	max-width: 900px;
+}
+
 img {
 	height: 150px;
 	width: 240px;
@@ -67,7 +59,6 @@ img {
 .galleryImgAnchor:hover {
     width:100%;
     height:100%;
-    background-color:#000;
     opacity:0.7;
     z-index: 100;
 }
@@ -80,7 +71,7 @@ img {
 .newPhotoForm, .editForm, .createNewUserForm {
 	color: white;
 	font-size: 30px;
-	line-height: 1;
+	line-height: 1.5;
 	font-family: 'Lobster', cursive;
 	text-shadow:
 		-1px -1px 2px black,
@@ -90,10 +81,11 @@ img {
 }
 
 input[type=text] {
-	width: 30%;
-	font-size: 14px;
+	width: 35%;
+	font-size: 16px;
 	color: navy;
 	text-shadow: none;
+	padding: 5px;
 }
 
 .editInput {
@@ -184,6 +176,10 @@ input {
 	font-size: 20px;
 	margin: 5px 0 5px 0;
 	border-radius: 25px;
+}
+
+#createNewUserButton {
+	margin-top: 20px;
 }
 
 #editUsername {
@@ -337,8 +333,25 @@ p {
 	color: #5BFF84;
 }
 
-#userIndex {
+.profileButtons {
 	margin: 5px;
+	font-size: 25px;
+	color: white;
+	display: inline-block;
+	border: none;
+	background-color: rgba(0, 230, 64, .6);
+	border-radius: 25px;
+	padding: 5px 10px;
+}
+
+.profileButtons:hover {
+	background-color: rgba(255,20,147,.6);
+}
+
+.profileButtons:active {
+	background-color: rgba(255,20,147,.6);
+  	box-shadow: 0 5px #666;
+  	transform: translateY(4px);
 }
 
 .userShow {
